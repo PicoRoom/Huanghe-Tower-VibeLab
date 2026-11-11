@@ -1,0 +1,8 @@
+# Unity serialized assets must retain their exact bytes on every Git client.
+unityLibrary/src/main/assets/bin/Data/** binary
+*.bundle binary
+*.so binary
+*.a binary
+*.aar binary
+*.jar binary
+*.png binary

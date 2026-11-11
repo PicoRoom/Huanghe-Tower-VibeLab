@@ -1,0 +1,20 @@
+# Plaque image sources
+
+## ModernShuTong.jpg — photographed original calligraphy
+
+- Photograph: **Gisling**, *黄鹤楼匾额*, 7 November 2009.
+- Original: https://commons.wikimedia.org/wiki/File:黄鹤楼匾额.JPG
+- Image license: **Creative Commons Attribution-ShareAlike 3.0 Unported** — https://creativecommons.org/licenses/by-sa/3.0/
+- Depicted calligraphy: **舒同（Shu Tong）**, *黄鹤楼*, 1984.
+- Image pixels are unchanged. A flat model surface selects the plaque quadrilateral via perspective-corrected UVs; the photograph, that UV mapping and derivative plaque appearance are distributed under CC BY-SA 3.0. This license applies to those components, not unrelated application code or tower geometry.
+- Right-to-left reading is retained together with the original border, signature and seal. The modern handwriting is used only on the modern model.
+
+## HistoricalName.png, QingSouth.png, ModernEntrance.png — newly composed titles
+
+Rendered from the host's **Kaiti TC Regular** font as raster artwork. Font software is not distributed. These are calligraphic interpretations, not facsimiles of a named historic writer.
+
+- Tang / Song / Yuan / Ming: `黃鶴樓`; no legible era-specific original plaque has been identified.
+- Qing: `南維高拱`; title documented for the Tongzhi tower. Available archival photographs do not preserve sufficient detail to recover every original brushstroke reliably.
+- Modern lower entrance: `氣吞雲夢`; title documented for the west entrance. The lettering is a contemporary Kaiti interpretation, not a facsimile of the original calligrapher.
+
+The text reads from right to left in the texture: `樓鶴黃`, `拱高維南`, `夢雲吞氣`. Detailed evidence and uncertainty: `research/huanghelou-plaque-evidence-20261110.md` in the source project. Generation: `tools/prepare_plaque_textures.py`. Exact photographic mapping and image hashes: `photo-provenance.json` and `calligraphy-provenance.json`.

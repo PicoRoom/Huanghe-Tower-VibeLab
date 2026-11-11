@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+apply from: 'setupSymbols.gradle'
+apply from: '../shared/keepUnitySymbols.gradle'
+apply from: '../shared/common.gradle'
+
+dependencies {
+    implementation project(':unityLibrary')
+}
+
+android {
+    namespace "com.bujiaban.huanghelou.pico"
+    ndkPath "/Volumes/NewSSD/6000.4.6f1/PlaybackEngines/AndroidPlayer/NDK"
+    ndkVersion "27.2.12479018"
+    compileSdk 36
+    buildToolsVersion "36.0.0"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    defaultConfig {
+        applicationId "com.bujiaban.huanghelou.pico"
+        versionName "2026.11.11.40"
+        minSdk 29
+        targetSdk 36
+        versionCode 202611100
+
+        ndk {
+            abiFilters "arm64-v8a"
+            debugSymbolLevel "none"
+        }
+    }
+
+    lint {
+        abortOnError false
+    }
+
+    androidResources {
+        ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:!CVS:!thumbs.db:!picasa.ini:!*~"
+        noCompress = ['.unity3d', '.ress', '.resource', '.obb', '.bundle', '.unityexp'] + unityStreamingAssets.tokenize(', ')
+    }
+
+    packaging {
+        jniLibs {
+            useLegacyPackaging true
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
+            jniDebuggable true
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    bundle {
+        language {
+            enableSplit false
+        }
+
+        density {
+            enableSplit false
+        }
+
+        abi {
+            enableSplit true
+        }
+
+        texture {
+            enableSplit true
+        }
+    }
+}

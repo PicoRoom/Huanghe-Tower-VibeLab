@@ -1,0 +1,16 @@
+/local.properties
+/unityLibrary/symbols/
+/*_BurstDebugInformation_DoNotShip/
+*.apk
+/build/
+/.gradle/
+/.cxx/
+/launcher/build/
+/launcher/.gradle/
+/launcher/.cxx/
+/unityLibrary/build/
+/unityLibrary/.gradle/
+/unityLibrary/.cxx/
+/unityLibrary/xrmanifest.androidlib/build/
+/unityLibrary/xrmanifest.androidlib/.gradle/
+/unityLibrary/xrmanifest.androidlib/.cxx/
